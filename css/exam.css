@@ -1,2 +1,56 @@
 /* The first line of your stylesheet **must** be your first name and your GSI. Add your name and GSI's name as a comment! */
+/* Brandon Nguyen  GSI: Jackie*/
 
+.skip {
+    position: absolute;
+    top: -100px;
+}
+
+
+.gallery {
+    display: grid;
+    width: 85%;
+    grid-template-columns: 24% 24% 24%;
+    background-color: #000000;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+}
+.gallery img{
+    width: 100%;
+    border: #ffa500 dashed 5px;
+}
+
+@media screen and (min-width: 550px) {
+    .gallery{
+        background-color: #ffffff;
+        gap: 5px;
+        align-items: normal;
+    }
+
+    .gallery img:nth-child(4n) {
+        grid-column: 1 / span 3;
+    }
+
+    .gallery img:nth-child(even) {
+        border: #000000 dashed;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .gallery{
+        grid-template-columns: 18% 18% 18% 18%;
+        background-color: #ffa500;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .gallery img{
+        border: #ffffff solid;
+        column-gap: 18px;
+    }
+
+    .gallery img:nth-child(4n) {
+        grid-column: 1 / span 4;
+    }
+}
